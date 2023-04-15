@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- css  link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.PNG">
+    <title>Home Made Cakes</title>
+
+</head>
+<body>
+    <!-- header section -->
+    <section id="header">
+        <header>
+            <a href="#" class="logo"><img src="/images/logo.PNG" alt="LOGO IMAGE"> </a>
+            <h3 class="logoname">Cakes by CakeHouse</h3>
+            <div id="menu-bar" class="fa-solid fa-bars" onclick="navbarToggle()"></div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#speciality">speciality</a></li>
+                    <li><a href="#order">orders</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="#review">review</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <!-- eof header section -->
+
+    <!-- home section -->
+      <section class="home" id="home">
+        <div class="content1">
+            <h2 > cakes made with love</h2>
+            <p >Here you get a cake for every occasion! <br>
+                We provide a slice of heaven.
+                Let us bake joy for you! <br> 
+                Unique confections for unique occasions. <br>
+            </p><br>
+           <p><a href="#gallery" class="btn" id="homebtn">order now</a></p> 
+        </div>
+        
+    </section>
+    <!-- eof home section -->
+
+
+    <!-- speciality section -->
+    <section class="speciality" id="speciality">
+        <h1 class="heading-spec">our <span>speciality</span></h1>
+        <div class="outerbox-spec" id="outer-specialsteps">
+            <!-- ===========speciality======== -->
+        </div>
+    </section>
+    <!-- eof speciality -->
+
+<!-- order section -->
+<section id="order" class="order">
+    <h1 class="heading-order">Place an <span>order</span></h1>
+    <div class="outerbox-order" id="outer-ordersteps">
+        <!-- ========orders====== -->
+    </div>
+</section>
+<!-- eof order -->
+
+<!-- display gallery images -->
+<div id="displayImgsDiv">
+    <img id="displayImgs" src="" alt="">
+    <span id="displayImgClose">&times;</span>
+    <h3 id="imgName"></h3>
+</div>
+<!-- eof display images -->
+
+<!--gallery section  -->
+<section id="gallery" class="gallery">
+    <h1 class="heading-gallery">our <span>gallery</span></h1>
+    <div class="outerbox-gallery" id="outer-gallerysteps">
+      <!-- ========gallery========== -->
+    </div>
+</section>
+<!-- eof gallery -->
+
+<!-- review section -->
+<section id="review" class="review">
+    <h1 class="heading-review">customer <span>reviews</span></h1>
+    <div class="outerbox-review" id="outer-reviewsteps">
+    <!-- ========reviews====== -->
+    </div>
+</section>
+<!-- eof review -->
+
+<!-- faq section -->
+<section id="faq" class="faq">
+    <h1 class="heading-faq">frequently asked <span>questions</span></h1>
+    <div class="outerbox-faq">
+        <div class="innerbox-faq">
+            <div class="ques">How to place an order for a cake?</div>
+            <div class="content-faq">Currently we are taking orders through a call/ email. And also you can visit us and can place an order</div>
+        </div><div class="faqline"></div>
+        <div class="innerbox-faq">
+            <div class="ques"> How to pay for my cake orders? </div>
+            <div class="content-faq">Once the order is ready you can do cash payments or card payments.</div>
+        </div><div class="faqline"></div>
+        <div class="innerbox-faq">
+            <div class="ques"> How to pick up my orders?  </div>
+            <div class="content-faq">You can pick up the order by yourself or we can deliver the order for your door step.</div>
+        </div><div class="faqline"></div>
+        <div class="innerbox-faq">
+            <div class="ques"> Do you prepare orders for custom designs?  </div>
+            <div class="content-faq">Yes. We do customize cake designs as you wish. You can tell us your idea to us.</div>
+        </div><div class="faqline"></div>
+    </div>
+</section>
+<!-- eof faq -->
+
+<!-- contact section -->
+<section id="contact" class="contact">
+    <h1 class="heading-contact">contact <span>us</span></h1>
+    <!-- <div id="displayMsgs"></div> -->
+        <div class="outerbox-contact">
+            <form action="" method="POST" class="orderform" name="orderForm" id="orderForm1">
+                <div class="innerbox-contact">
+                    <label for="name" >Your Name</label>
+                    <input type="text" name="Uname" id="name" placeholder="Your Name">
+                </div>
+                <div class="innerbox-contact">
+                    <label for="email" >Your Email</label>
+                    <input type="text" name="" id="email" placeholder="Your Email">
+                </div>
+                <div class="innerbox-contact">
+                    <label for="number">Your Contact</label>
+                    <input type="tel" name="" id="number" placeholder="Contact Number">
+                </div>
+                <div class="innerbox-contact">
+                    <label for="msg">Message</label>
+                    <textarea name="Msg" id="msg" cols="50" rows="10" placeholder="Message"></textarea>
+                </div>
+                <div id="displayMsgs"></div>
+                <div class="innerbox-contact">
+                    <input type="button" value="SUBMIT" onclick="submitForm()">
+                </div>
+            </form>
+            <div class="innercontact" id="inner-contact">
+                <h3><span>Call Us</span> 0717777777</h3>
+                <h3><span>Visit Us</span> Cakes by CakeHouse, No 23, Main Street, Piliyandala</h3>
+            </div>
+        </div>
+</section>
+<!-- eof contact -->
+
+<!-- footer sectio -->
+<section id="footer" class="footer">
+    <div class="outerbox-footer" id="outer-footer">
+        <h3>All rights reserved  &copy 2021</h3>
+        <h3>Designed by LP</h3>
+    </div>
+</section>
+<!-- eof footer -->
+
+    <script src="js/specialitysteps.js"></script>
+    <script src ="js/orderingsteps.js"></script>
+    <script src="js/galleryimgs.js"></script>
+    <script src="js/reviewsteps.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

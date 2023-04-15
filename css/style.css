@@ -1,0 +1,985 @@
+  @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Nunito:wght@400;500;700&display=swap');
+
+/* =======variables===== */
+:root{
+    --white:#fff;
+    --black: #000;
+    --headingColor: #2554C7;
+    
+}
+
+  html{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after{
+    padding:0;
+    margin:0;
+    box-sizing: inherit;
+    outline: none;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+/* =========header section======== */
+
+#header header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+    padding: 0.4rem 2%;
+    background-color:  #728FCE;
+    z-index: 10;
+    height: 20%;
+}
+
+
+ .navbar, .log, .logoname{
+    flex: 1 1 30%;
+ }
+
+ #header header .logoname{
+    margin-left: -22rem;
+    font-size: 1.2rem;
+    font-family: Cookie;
+    color: var(--black);
+    font-weight: 100;
+    cursor: pointer;
+ }
+
+#header header .navbar{
+    margin-left: -14rem;
+    opacity: 1;
+}
+
+#header header .navbar ul li {
+    display: inline;
+    margin-right: 0.8rem;
+}
+
+#header header .navbar ul li a{
+    text-decoration: none;
+    /* font-size: 1rem; */
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--white);
+    font-family: Cookie;
+    letter-spacing: 0.2rem;
+    transition: color 3s, text-decoration 2s;
+}
+
+#header header .navbar ul li a:hover{
+    color: var(--black);
+    text-decoration: underline;
+}
+
+#header .logo img{
+   border-radius: 50%;
+   width: 22%;
+}
+
+#menu-bar{
+    cursor: pointer;
+    display: none;
+    font-size: 1.2rem;
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    color: 1rem;
+
+}
+
+
+/* ==========home section========== */
+
+#home{ 
+   background-image: url(/images/i11.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 120vh;   
+  margin-top: 9%;
+  padding-top: 5%;   
+  opacity: 0.8;
+ 
+ } 
+
+
+#home .content1{
+    color: #fff;
+}
+
+
+#home .content1 h2, #home .content1 p {
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+    flex: 1;
+}
+
+
+#home .content1 h2{
+    padding-bottom: 1rem;
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-family: Cookie;
+    font-weight: 100;
+}
+
+#home .content1 p{
+    font-size: 1.5rem;
+    animation: imagemove1 5s linear;
+}
+
+
+#homebtn{
+    display: inline-block;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+#homebtn::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #95B9C7;
+    transition: height 1s linear;
+    /* opacity: 0.1; */
+    z-index: -1;
+}
+
+#homebtn:hover::before{
+    height: 100%;
+    bottom:0;
+}
+
+#homebtn:hover{
+    color: blue;
+    font-weight: bold;
+}
+
+
+
+@keyframes imagemove1{
+    0%{ translate: -1000px}
+    /* 100%{translate: 1000px;} */
+
+}
+
+/* #home */
+
+/* #home .content2 .image{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+#home .image img{
+
+    border-radius: 50%;
+
+} */
+
+
+/* ===========speciality section========= */
+#speciality, #order, #gallery, #review, #faq, #contact, #footer{
+    margin-top: 4rem;
+    /* margin-bottom: 4rem; */
+}
+
+ .heading-spec, .heading-order, .heading-gallery, .heading-review, .heading-faq, .heading-contact {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-family: Cookie;
+    font-weight: 100;
+    text-align: center;
+    /* padding-bottom: 1rem; */
+}
+
+
+.heading-spec > span, .heading-order > span, .heading-gallery > span, .heading-review > span, .heading-faq > span, .heading-contact> span {
+    font-style: italic;
+    color: var(--headingColor);
+}
+
+#speciality .outerbox-spec{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: center;
+ gap: 5rem;
+ margin: 0 auto;
+
+}
+
+#speciality .innerbox-spec{
+    
+    flex: 0 0 25%;
+    border-radius: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#speciality .innerbox-spec .content-spec{
+   padding: 5rem 1rem;   
+} 
+
+#speciality .innerbox-spec .content-spec h3{
+    text-transform: capitalize;
+    font-family: Cookie;
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#speciality .innerbox-spec .content-spec p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-family: "Nunito", sans-serif;
+}
+
+
+#speciality .innerbox-spec img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 2rem; */
+    position: absolute;
+     top: -100%;
+    left: 0; 
+    object-fit: cover;
+}
+
+#speciality .innerbox-spec:hover img{
+    top: 0;
+    transition: top 0.5s linear;
+}
+
+
+/* =========order section========= */
+
+.outerbox-order{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    /* border: 1px solid; */
+}
+
+.innerbox-order{
+    flex: 0 0 20rem; 
+    text-align: center;
+    padding: 1rem; 
+    cursor: pointer;
+}
+
+.innerbox-order img{
+   width: 25%;
+   height: 25%;
+} 
+
+.innerbox-order h3{
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: 100;
+}
+
+
+/* ==========ImageView Section======== */
+#displayImgsDiv{
+    background-color: rgb(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+}
+
+#displayImgs{
+    position: relative;
+}
+
+#displayImgClose{
+    font-size: 5rem;
+    position: absolute;
+    right:100px;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#imgName{
+    font-size: 1rem;
+    position: absolute;
+    font-family: "Nunito", sans-serif;
+    color: var(--black);
+    font-weight: bold;
+    padding-top: 2rem;
+}
+
+
+/* ===========Gallery Section========= */
+
+#gallery{
+    position: relative;
+}
+
+
+#gallery .outerbox-gallery{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5rem;
+    justify-content: center;
+   
+}
+
+#gallery .innerbox-gallery{
+    flex: 0 0 25%;
+    border-radius: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 20rem;
+}
+
+
+#gallery .innerbox-gallery img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s linear;
+}
+
+#gallery .innerbox-gallery img:hover{
+    transform: scale(1.2);
+}
+
+/* #gallery .innerbox-gallery .content-gallery{
+    position: absolute;
+    top: -1000;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.6);
+}
+
+#gallery .innerbox-gallery:hover .content-gallery{
+    top: 0;
+    height: 100%;
+    transition: height 0.5s linear;
+} */
+
+/* #gallery .innerbox-gallery .content-gallery button{
+  margin: 0 auto;
+  display: block;
+  background-color: var(--white);
+  text-decoration: none;
+  padding: 1rem 1rem;
+  text-transform: capitalize;
+   position: relative;
+   top: 50%;
+  z-index: 1;
+  border-radius: 4px;
+  font-size: 1rem;
+} */
+
+
+/* button::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #95B9C7;
+    transition: height 1s linear;
+    z-index: -1;
+}
+
+button:hover::before{
+    height: 100%;
+    bottom:0;
+} */
+
+
+/* ==========review section========== */
+
+#review .outerbox-review{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: center;
+   
+}
+
+#review .innerbox-review{
+    flex: 0 0 30%;
+    border-radius: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 1rem 0;
+}
+
+
+
+#review .innerbox-review img{
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+#review .innerbox-review h4, #review .innerbox-review p{
+    text-align: justify;
+    margin-top: 1rem;
+    padding:0 1rem;
+    font-family: "Nunito", sans-serif;
+}
+
+#review .innerbox-review h4{
+    text-align: center;
+    font-family: Cookie;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+
+/* =========faq section========= */
+.outerbox-faq{
+    display: flex;
+    flex-direction: column;
+    padding-left: 25%;
+    row-gap: 1rem;
+    /* align-items: center; */
+}
+
+.innerbox-faq{
+    font-family: "Nunito", sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+ 
+.ques{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.faqline{
+    height: 0.2rem;
+    width: 70%;
+    background-color: #000;
+}
+
+.content-faq{
+position: relative;
+/* display: none; */
+margin-top: -0.5rem;
+color: #fff;
+/* height: -100%; */
+}
+
+
+.innerbox-faq .ques::before{
+    content: '+';
+    position: absolute;
+    /* top: 50%; */
+    left: 65%;
+    /* transform: translateY(-50%); */
+}
+
+.innerbox-faq.activeAccordion .content-faq{
+    display: block;
+    /* height: 100%; */
+    margin-top: 1rem;
+    color: #000;
+   transition: color 1s linear, margin-top 1s linear;
+}
+
+.innerbox-faq.activeAccordion .ques::before{
+    content: '-';
+}
+
+/* ==========contact section=========== */
+
+#displayMsgs{
+    text-align: center;
+    color: red;
+    font-style: italic;
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.orderform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerbox-contact{
+    width: 100%;
+    display: contents;
+    /* padding: 2rem; */
+
+}
+
+.innercontact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+}
+
+.innercontact > h3  > span{
+    color: var(--headingColor);
+    font-size: 2rem;
+    font-family: "Cookie";
+}
+
+
+.innerbox-contact label{
+    width: 50%;
+    font-size: 1.2rem;
+    font-family: "Nunito", sans-serif;
+}
+
+.innerbox-contact input, .innerbox-contact textarea{
+    width: 50%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+}
+
+
+ input:focus, textarea:focus{
+    border: 2px solid #000;
+ }
+
+ input[type="button"]{
+    width: 10rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+    background-color: #097486;
+    /* transition: background-color 1s linear, color 1s linear;
+    -webkit-transition: background-color 1s linear, color 1s linear, transform 1s linear; */
+    text-align: center;
+    cursor: pointer;
+ }
+
+ input[type="button"]:hover{
+
+    color: var(--white);
+    border: 2px solid var(--black);
+     /* transform: scale(1);
+    -webkit-transform: scale(1);  */
+    cursor: pointer;
+}
+
+
+.innerbox-contact input::placeholder, .innerbox-contact textarea::placeholder{
+    /* font-size: 1rem; */
+    font-style: italic;
+    font-family: "Nunito", sans-serif;
+}
+
+
+/* ========footer section========= */
+#outer-footer{
+    background-color: #728FCE;
+    /* padding:1rem 0; */
+}
+
+#outer-footer > h3{
+    /* margin-bottom: 1rem; */
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: Cookie;
+    font-weight: 100;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+
+
+/* ================================
+=========MEDIA QUERIES=============
+=================================== */
+
+@media (min-width:1280px){
+    #header header .navbar ul li a{
+        font-size: 2.2rem;
+    }
+
+    #header header{
+        height: 22%;
+    }
+
+    #header header .logoname{
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width:1280px){
+    #header header .navbar ul li a{
+        font-size: 1.5rem;
+    }
+
+    
+
+    #home{
+        height: 100vh;   
+        margin-top: 10%;
+        padding-top: 10%;
+    }
+
+    #header header .logoname{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:1024px){
+    #header header .navbar ul li a{
+     
+        font-size: 1.3rem;
+    }
+
+    #home{
+        height: 100vh;   
+        margin-top: 10%;
+        padding-top: 10%;
+    }
+
+    #home .content1 h2{
+        padding-bottom: 1rem;
+    }
+    
+    #home .content1 p{
+        font-size: 1.2rem;
+    }
+
+
+    .innerbox-contact>input[type="submit"]{
+        width: 20%;
+
+    }
+}
+
+
+@media (max-width:991px){
+
+    #header header{
+        height: 12%;
+    }
+
+    #header header .navbar ul li a{
+        font-size: 1.2rem;
+    }
+
+    #header header .navbar{
+        margin-left: -22rem;
+    }
+
+    #header header .logoname{
+        font-size: 1rem;
+    }
+
+    #header .logo img{
+        width: 15%;
+     }
+
+    #home{
+        height: 75vh;   
+        margin-top: 10%;
+        padding-top: 10%;
+
+    }
+
+    
+    #home .content1 h2{
+        padding-bottom: 1rem;
+        font-size: 3rem;
+        
+    }
+
+    #speciality .innerbox-spec .content-spec{
+        padding: 3rem 1rem;   
+     } 
+
+     #speciality .innerbox-spec .content-spec p{
+      font-size: 1rem;
+     } 
+
+}
+
+
+
+@media (max-width:768px){
+
+    #header header{
+        height: 19%;
+    }
+
+    #header header .navbar ul li a{
+        font-size: 1.5rem;
+    }
+
+
+    #header header .logoname{
+        font-size: 1.5rem;
+
+    }
+
+      #header .logo img{
+        width: 15%;
+     }
+
+    #menu-bar{
+        display: initial;
+    }
+
+    #header header .navbar{
+        position: absolute; 
+        top: 100%;
+         left:0; 
+         right: 0;
+         margin-left: 0;
+         /* top: -1000%; */
+         display: none;
+         background-color: #95B9C7;
+    }
+
+    #header header  .navbar.navToggle{
+        /* top:100%; */
+        display: block;
+    } 
+
+    #header header .navbar ul li a{
+        display: block;
+        padding: 0.2rem;
+        padding-left: 1rem; 
+        color: var(--white);
+        border-top: 0.3rem solid rgb(0,0,0, 0.5) ;
+        margin-top: 0.2rem;
+        padding-top: 1.2rem;
+        
+    }
+
+    #home{
+        height: 75vh;   
+        margin-top: 18%;
+        padding-top: 10%;
+    }
+
+    #home .content1 h2{
+        padding-bottom: 1rem;
+        font-size: 3rem;
+
+    }
+    
+    #home .content1 p{
+        font-size: 1rem;
+    }
+
+
+    #speciality .innerbox-spec,  #gallery .innerbox-gallery, #review .innerbox-review {
+        flex: 0 0 40%;
+    }
+
+    
+    .outerbox-faq{
+        padding-left: 15%;
+        row-gap: 1rem;
+    }
+    
+    .faqline{
+        width: 90%;
+    }
+
+    .innerbox-faq .ques::before{
+        left: 85%;
+    }
+
+    .innerbox-contact>input[type="submit"]{
+        width: 30%;
+
+    }
+
+}
+
+@media(max-width:568px){
+
+
+    #speciality .innerbox-spec, #gallery .innerbox-gallery, #review .innerbox-review{
+        flex: 0 0 90%;
+    }
+
+    #speciality .heading-spec, #order .heading-order, #gallery .heading-galler, #review .heading-review, #faq .heading-faq { 
+        font-size: 2.8rem;
+    }
+
+    .ques{
+        font-size: 1rem;
+    }
+
+    .content-faq{
+        font-size: 0.8rem;
+    }
+
+    .innerbox-contact label{
+        width: 80%;
+    }
+    
+    .innerbox-contact input, .innerbox-contact textarea{
+        width: 80%;
+      
+    }
+
+    .innerbox-contact>input[type="submit"]{
+        width: 80%;
+
+    }
+
+    #displayImgClose{
+        font-size: 4rem;
+        right:70px;
+        padding-top: 0.5rem;
+    }
+   
+}
+
+@media(max-width:480px){
+
+
+    #header header{
+        height: 14%;
+    }
+
+    #header .logo img{
+        width: 10%;
+     }
+
+    #home{
+        height: 55vh;   
+        margin-top: 15%;
+        padding-top: 10%;
+    }
+
+    #home .content1 h2{
+        padding-bottom: 1rem;
+        font-size: 2rem;
+    }
+    
+    #home .content1 p{
+        font-size: 0.8rem;
+    }
+
+    #homebtn{
+        margin-top: -1rem;
+    }
+
+    #speciality .innerbox-spec, #gallery .innerbox-gallery, #review .innerbox-review{
+        flex: 0 0 90%;
+    }
+
+
+    #displayImgClose{
+        font-size: 3rem;
+        right:25px;
+        padding-top:0.8rem;
+    }
+} 
+
+/*======= Orientation===== */
+
+
+@media(max-width:991px) and (orientation: landscape){
+
+
+    #header header{
+        height: 25%;
+    }
+
+    #home{
+      height: 110%;
+        margin-top: 5%;
+        padding-top: 5%;
+        padding-bottom: 3%;
+    }
+}
+
+
+
+
+@media(max-width:768px) and (orientation: landscape){
+
+    #header header{
+        height: 25%;
+    }
+
+    #home{
+        height: 110%;
+        margin-top: 10%;
+        padding-top: 10%;
+        padding-bottom: 3%;
+    }
+}
+
+
+@media(max-width:480px) and (orientation: landscape){
+
+    #header header{
+        height: 24%;
+    }
+
+    #home{
+        height: 160vh;
+    }
+}
+
+
+
+
+
